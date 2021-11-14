@@ -5,7 +5,7 @@ import fileUpload from 'express-fileupload'
 
 import {BlogPost} from '../models/blogpost'
 
-export async function storeController(req: Request, res: Response, next: NextFunction) {
+export async function storePostController(req: Request, res: Response, next: NextFunction) {
     const image = req.files ? req.files.image : undefined;
     if(!image) return next();
     if(!isSingleFile(image)) return next();

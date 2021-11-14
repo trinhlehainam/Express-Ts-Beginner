@@ -1,6 +1,6 @@
 import {Schema, model} from 'mongoose'
 
-const BlogPostScenma = new Schema({
+const BlogPostSchema = new Schema({
     title: String,
     content: String,
     username: String,
@@ -11,6 +11,6 @@ const BlogPostScenma = new Schema({
     imgPath: String
 });
 
-const BlogPost = model('blogpost', BlogPostScenma);
+const BlogPost = model('blogpost', BlogPostSchema);
 
 export {BlogPost};
