@@ -1,0 +1,7 @@
+export {homePageController as homePage} from './homePage'
+export {aboutController as about} from './about'
+export {contactController as contact} from './contact'
+export {getPostController as getPost} from './getPost'
+export {storeController as store} from './store'
+export {newPostController as newPost} from './newPost'
+export {validateMiddleware} from './validateMiddleware'
