@@ -9,13 +9,12 @@
         <!-- Navigation-->
         <%-include('layouts/navbar');-%>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+        <header class="masthead" style="background-image: url('/img/home-pg.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>Write New Blog</h1>
-                            <h2 class="subheading">Inspire everyone</h2>
+                            <h1>Register</h1>
                         </div>
                     </div>
                 </div>
@@ -34,25 +33,18 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form action="/posts/store" method="POST" enctype="multipart/form-data">
+                            <form action="/users/store" method="POST" enctype="multipart/form-data">
                                 <div class="form-floating">
-                                    <input class="form-control" id="title" type="text" placeholder="Title" name="title"/>
-                                    <label for="title">Title</label>
+                                    <input class="form-control" id="user" type="user" placeholder="Title" name="user"/>
+                                    <label for="title">User</label>
                                 </div>
                                 <div class="form-floating">
-                                    <textarea rows="5" class="form-control" id="content" placeholder="content" style="height: 12rem" name="content"></textarea>
-                                    <label for="content">Description</label>
+                                    <input class="form-control" id="password" type="password" placeholder="Title" name="password"/>
+                                    <label for="title">Password</label>
                                 </div>
-                                <div class="control-group">
-                                    <div class="form-group floating-label-form-group controls">
-                                    <label>Image</label>
-                                    <input type="file" class="form-control" id="image"
-                                    name="image">
-                                    </div>
-                                    </div>
                                 <br />
                                 <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Register</button>
                             </form>
                         </div>
                     </div>

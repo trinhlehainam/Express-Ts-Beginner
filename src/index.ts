@@ -27,3 +27,4 @@ app.get('/about', controller.about);
 app.get('/post/:id', controller.getPost);
 app.get('/posts/new', controller.newPost);
 app.post('/posts/store', controller.store);
+app.get('/users/register', controller.register);
