@@ -28,5 +28,6 @@ app.get('/post/:id', controller.getPost);
 app.get('/posts/new', controller.newPost);
 app.post('/posts/store', controller.storePost);
 app.get('/auth/register', controller.register);
-app.post('/users/register', controller.registerUser);
+app.post('/users/register', controller.validateRegister);
 app.get('/auth/login', controller.login);
+app.post('/users/login', controller.validateLogin);
