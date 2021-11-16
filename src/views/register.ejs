@@ -33,6 +33,7 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
+                            <%-include('layouts/errors')-%>
                             <form action="/users/register" method="POST" enctype="multipart/form-data">
                                 <div class="form-floating">
                                     <input class="form-control" id="user" type="user" placeholder="user" name="username"/>

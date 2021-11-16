@@ -3,6 +3,7 @@ import fileUpload from 'express-fileupload'
 import expressSession from 'express-session'
 import ejs from 'ejs'
 import mongoose from 'mongoose'
+import flash from 'connect-flash'
 
 import * as controller from './controllers'
 import * as middleware from './middlewares'
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(fileUpload());
 app.use(expressSession({secret: "Crypto Checker"}));
+app.use(flash());
 
 app.get('/', controller.homePage);
 app.get('/post/:id', controller.getPost);
@@ -32,3 +34,4 @@ app.post('/users/register', controller.validateRegister);
 app.get('/auth/login', controller.login);
 app.post('/users/login', controller.validateLogin);
 app.get('/users/logout', controller.logout);
+app.use((req,res) => {res.render('notfound')});

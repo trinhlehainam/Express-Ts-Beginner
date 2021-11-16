@@ -1,15 +1,16 @@
 import {Schema, model} from 'mongoose'
+import uniqueValidator from 'mongoose-unique-validator'
 import bcrypt from 'bcrypt'
 
 const UserSchema = new Schema({
     username: {
         type: String,
-        required: true,
+        required: [true, "Please enter username"],
         unique: true
     },
     password: {
         type: String,
-        required: true
+        required: [true, "Please enter password"],
     }
 });
 
@@ -21,6 +22,8 @@ UserSchema.pre('save', function(next) {
         next();
     })
 })
+
+UserSchema.plugin(uniqueValidator);
 
 const User = model('user', UserSchema);
 
