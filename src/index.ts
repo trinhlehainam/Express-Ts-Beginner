@@ -31,3 +31,4 @@ app.get('/auth/register', controller.register);
 app.post('/users/register', controller.validateRegister);
 app.get('/auth/login', controller.login);
 app.post('/users/login', controller.validateLogin);
+app.get('/users/logout', controller.logout);
