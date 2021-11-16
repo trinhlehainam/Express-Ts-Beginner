@@ -27,5 +27,6 @@ app.get('/about', controller.about);
 app.get('/post/:id', controller.getPost);
 app.get('/posts/new', controller.newPost);
 app.post('/posts/store', controller.storePost);
-app.get('/users/register', controller.register);
-// app.post('/users/store', controller.storeUser);
+app.get('/auth/register', controller.register);
+app.post('/users/register', controller.registerUser);
+app.get('/auth/login', controller.login);

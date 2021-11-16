@@ -17,12 +17,11 @@ UserSchema.pre('save', function(next) {
     const user = this;
 
     bcrypt.hash(user.password, 10, (err, hash) => {
-        console.log(err);
         user.password = hash;
         next();
     })
 })
 
-const User = model('blogpost', UserSchema);
+const User = model('user', UserSchema);
 
 export {User};
