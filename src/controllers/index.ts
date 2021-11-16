@@ -1,6 +1,4 @@
 export {homePageController as homePage} from './homePage'
-export {aboutController as about} from './about'
-export {contactController as contact} from './contact'
 export {getPostController as getPost} from './getPost'
 export {storePostController as storePost} from './storePost'
 export {newPostController as newPost} from './newPost'
