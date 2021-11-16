@@ -18,6 +18,7 @@ app.listen(port);
 
 app.set('view engine', 'ejs');
 
+// Middlewares
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -25,6 +26,7 @@ app.use(fileUpload());
 app.use(expressSession({secret: "Crypto Checker"}));
 app.use(flash());
 
+// Routes
 app.get('/', controller.homePage);
 app.get('/post/:id', controller.getPost);
 app.get('/posts/new', controller.newPost);

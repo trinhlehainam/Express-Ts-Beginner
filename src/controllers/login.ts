@@ -16,5 +16,6 @@ export function loginController(req: Request, res: Response) {
             isLoggedIn, 
             errors: req.flash('validationErrors'),
             username: username, 
-            password: password});
+            password: password
+        });
 }
