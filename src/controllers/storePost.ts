@@ -5,6 +5,7 @@ import fileUpload from 'express-fileupload'
 
 import {BlogPost} from '../models/blogpost'
 
+//TODO: add check multiple files
 export async function storePostController(req: Request, res: Response, next: NextFunction) {
     const image = req.files ? req.files.image : undefined;
     if(!image) return next();

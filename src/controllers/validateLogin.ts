@@ -2,6 +2,7 @@ import {Request, Response} from 'express'
 import bcrypt from 'bcrypt'
 
 import {User} from '../models/user'
+import '../utils/mysession'
 
 function validateLoginController(req: Request, res: Response) {
     const {username, password} = req.body;
@@ -9,7 +10,7 @@ function validateLoginController(req: Request, res: Response) {
         if (!user) return res.redirect('/auth/login');
         bcrypt.compare(password, user.password, (err, same) => {
             if (!same) return res.redirect('/auth/login');
-            // TODO: store user session
+            req.session.userId = user._id;
             return res.redirect('/');
         });
     });

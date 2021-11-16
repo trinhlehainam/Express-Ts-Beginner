@@ -1,1 +1,1 @@
-export {validateMiddleware as validate} from './validateMiddleware'
+export {validateStorePostMiddleware as validateStorePost} from './validateStorePost'
